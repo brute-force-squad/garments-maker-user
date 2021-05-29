@@ -1,6 +1,6 @@
 <template>
   <div class="showcase">
-    <video src="../static/video/cloth.mp4" muted autoplay loop></video>
+    <video src="../../static/video/cloth.mp4" muted autoplay loop></video>
     <div class="overlay"></div>
     <div class="text">
       <div class="overline">Manufacturer, Exporter & Importer</div>

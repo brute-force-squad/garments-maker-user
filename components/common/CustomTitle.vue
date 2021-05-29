@@ -17,6 +17,10 @@ export default {
 .display-1 {
   font-family: 'Poppins', sans-serif !important;
   font-weight: 600;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 25px !important;
+  }
 }
 
 .main-section {
@@ -31,21 +35,15 @@ export default {
     position: absolute;
     font-size: 125px;
     font-weight: 900;
-    left: -5rem;
+    left: -6rem;
     top: -4.5rem;
     opacity: 0.1;
 
     @media only screen and (max-width: 600px) {
-      font-size: 90px;
-      top: -2.8rem;
-      left: -3.5rem;
+      font-size: 50px;
+      top: -1.2rem;
+      left: -2.5rem;
     }
   }
 }
-
-// @media only screen and (max-width: 600px) {
-//   .number {
-//     font-size: 90px;
-//   }
-// }
 </style>
