@@ -13,6 +13,9 @@
       <!-- SECTION 3: SUPPLY CHAIN SOLUTION -->
       <custom-title number="03" title="Supply Chain Solution" class="my-6" />
       <supply-chain-solution />
+
+      <!-- SECTION 4: OPERATION TEAM -->
+      <custom-title number="04" title="Operation Team" class="my-6" />
     </v-container>
   </div>
 </template>

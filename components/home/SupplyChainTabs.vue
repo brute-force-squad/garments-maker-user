@@ -12,19 +12,20 @@
       <div class="mt-10">
         <v-img
           :src="option.image"
+          lazy-src="https://firebasestorage.googleapis.com/v0/b/garments-maker.appspot.com/o/black.jpg?alt=media&token=35f0c007-4afc-432e-84bb-0d441598fcc5"
           contain
           max-height="400"
           max-width="400"
           class="mx-auto"
         >
-          <template v-slot:placeholder>
+          <!-- <template v-slot:placeholder>
             <v-sheet color="grey lighten-4">
               <v-skeleton-loader
                 class="mx-auto my-auto"
                 type="image"
               ></v-skeleton-loader>
             </v-sheet>
-          </template>
+          </template> -->
         </v-img>
       </div>
     </v-tab-item>
