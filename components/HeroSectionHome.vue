@@ -45,7 +45,7 @@ export default {}
 
   .text {
     position: relative;
-    z-index: 100;
+    z-index: 2;
     color: #fff;
     height: inherit;
     display: flex;

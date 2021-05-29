@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <v-app-bar app color="primary" dark>
+    <v-app-bar app color="primary" dark class="app-depth">
       <router-link to="/">
         <div class="d-flex align-center">
           <v-img
@@ -74,3 +74,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.app-depth {
+  z-index: 100;
+}
+</style>
