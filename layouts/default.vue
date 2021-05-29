@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <v-app-bar app color="primary" dark hide-on-scroll>
+    <v-app-bar app color="primary" dark>
       <router-link to="/">
         <div class="d-flex align-center">
           <v-img
@@ -51,9 +51,9 @@
     <v-main>
       <nuxt />
     </v-main>
-    <v-footer :absolute="!fixed" app>
+    <!-- <v-footer :absolute="!fixed" app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+    </v-footer> -->
   </v-app>
 </template>
 

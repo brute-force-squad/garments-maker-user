@@ -20,8 +20,8 @@ export default {}
 .showcase {
   position: relative;
   height: 80vh;
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
 
   video {
     position: absolute;
