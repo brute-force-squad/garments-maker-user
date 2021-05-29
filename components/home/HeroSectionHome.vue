@@ -1,6 +1,6 @@
 <template>
   <div class="showcase">
-    <video src="../../static/video/cloth.mp4" muted autoplay loop></video>
+    <video src="../../static/video/cloth.mp4" muted autoplay loop />
     <div class="overlay"></div>
     <div class="text">
       <div class="overline">Manufacturer, Exporter & Importer</div>
@@ -20,8 +20,6 @@ export default {}
 .showcase {
   position: relative;
   height: 80vh;
-  margin: 0 !important;
-  padding: 0 !important;
 
   video {
     position: absolute;

@@ -1,14 +1,14 @@
 <template>
-  <v-row>
-    <v-col class="text-center">
-      <blockquote class="blockquote">
-        &#8220;First, solve the problem. Then, write the code.&#8221;
-        <footer>
-          <small>
-            <em>&mdash;John Johnson</em>
-          </small>
-        </footer>
-      </blockquote>
-    </v-col>
-  </v-row>
+  <div>
+    <image-hero-section text="About GML" />
+  </div>
 </template>
+
+<script>
+import ImageHeroSection from '~/components/common/ImageHeroSection.vue'
+export default {
+  components: { ImageHeroSection },
+}
+</script>
+
+<style lang="scss" scoped></style>
