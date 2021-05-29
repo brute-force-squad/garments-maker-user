@@ -21,7 +21,7 @@
         <v-btn
           v-for="item in items"
           :key="item.title"
-          class="mr-3 btn-style"
+          class="mr-3 text-capitalize"
           :to="item.to"
           depressed
           plain
@@ -49,9 +49,7 @@
       </div>
     </v-app-bar>
     <v-main>
-      <v-container>
-        <nuxt />
-      </v-container>
+      <nuxt />
     </v-main>
     <v-footer :absolute="!fixed" app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
@@ -76,9 +74,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-.btn-style {
-  text-transform: none;
-}
-</style>
