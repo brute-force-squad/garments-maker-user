@@ -5,9 +5,9 @@
     </v-tab>
 
     <v-tab-item v-for="(option, i) in options" :key="i" class="mt-6">
-      <div class="text-center">
+      <p>
         {{ option.text }}
-      </div>
+      </p>
 
       <div class="mt-10">
         <v-img
@@ -107,4 +107,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+p {
+  text-align: center;
+  line-height: 168%;
+}
+</style>
