@@ -1,7 +1,7 @@
 <template>
-  <p>
-    {{ text }}
-  </p>
+  <div>
+    <slot></slot>
+  </div>
 </template>
 
 <script>
@@ -13,6 +13,7 @@ export default {
 <style lang="scss" scoped>
 p {
   line-height: 180.5%;
+  font-size: 16px;
 }
 
 p::first-letter {
