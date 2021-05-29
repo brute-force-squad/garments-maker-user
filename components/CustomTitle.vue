@@ -1,6 +1,6 @@
 <template>
   <div class="main-section">
-    <div class="wrapper my-6">
+    <div class="wrapper my-10">
       <div class="display-1">{{ title }}</div>
       <div class="number">{{ number }}</div>
     </div>
