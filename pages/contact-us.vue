@@ -9,8 +9,16 @@
       </div>
       <v-row>
         <v-col cols="12" md="4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
-          impedit?
+          <div class="subtitle-1">CORPORATE OFFICE</div>
+          <div class="body-2">
+            HOUSE # 17, ROAD # 03, SECTOR # 11 UTTARA MODEL TOWN, DHAKA-1230
+          </div>
+          <br />
+          <div class="subtitle-1">CHINA OFFICE</div>
+          <div class="body-2">
+            NO. 21018-2, 21 F, BUILDING B, WONDER PLAZA, KEQIAO, SHAOXING CITY,
+            ZHERJIANG PROV CHINA.
+          </div>
         </v-col>
         <v-col cols="12" md="8">
           <contact-us-form />
@@ -46,5 +54,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 4em;
 }
 </style>

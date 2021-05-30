@@ -51,25 +51,64 @@
     <v-main>
       <nuxt />
     </v-main>
-    <v-footer dark padless class="mt-12">
-      <v-card flat tile class="primary white--text">
-        <v-card-text class="white--text pt-0">
-          Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet.
-          Mauris cursus commodo interdum. Praesent ut risus eget metus luctus
-          accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim
-          a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula
-          lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus
-          iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum
-          tempor vel ut orci. Orci varius natoque penatibus et magnis dis
-          parturient montes, nascetur ridiculus mus.
-        </v-card-text>
+    <v-footer dark padless class="mt-12 primary">
+      <v-container>
+        <div class="text-center title">Garments Maker LTD</div>
+        <v-row>
+          <v-col cols="12" md="6">
+            <div class="subtitle-1">CORPORATE OFFICE</div>
+            <div class="body-2">
+              HOUSE # 17, ROAD # 03, SECTOR # 11 UTTARA MODEL TOWN, DHAKA-1230
+            </div>
+            <br />
+            <div class="subtitle-1">CHINA OFFICE</div>
+            <div class="body-2">
+              NO. 21018-2, 21 F, BUILDING B, WONDER PLAZA, KEQIAO, SHAOXING
+              CITY, ZHERJIANG PROV CHINA.
+            </div>
+          </v-col>
 
+          <v-col cols="12" md="6">
+            <v-list color="transparent">
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-phone</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title
+                  ><a href="tel:+88-02-8991628"
+                    >+88-02-8991628</a
+                  ></v-list-item-title
+                >
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-deskphone</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title
+                  ><a href="tel:+88-02-8991621"
+                    >+88-02-8991621</a
+                  ></v-list-item-title
+                >
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon>mdi-email</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>
+                  <a href="mailto:info@garmentsmakerbd.com"
+                    >info@garmentsmakerbd.com</a
+                  >
+                </v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-col>
+        </v-row>
         <v-divider></v-divider>
+      </v-container>
 
-        <v-card-text class="white--text text-center">
-          © {{ new Date().getFullYear() }} — <strong>Garments Maker</strong>
-        </v-card-text>
-      </v-card>
+      <v-card-text class="white--text text-center">
+        © {{ new Date().getFullYear() }} — <strong>Garments Maker</strong>
+      </v-card-text>
     </v-footer>
   </v-app>
 </template>
@@ -116,5 +155,16 @@ export default {
 <style lang="scss" scoped>
 .app-depth {
   z-index: 100;
+}
+
+.title,
+.subtitle-1,
+.body-2 {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
 }
 </style>
