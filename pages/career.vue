@@ -12,16 +12,19 @@
         src="https://firebasestorage.googleapis.com/v0/b/garments-maker.appspot.com/o/career.png?alt=media&token=891206a1-3171-4943-b89d-0e908ab46caf"
         contain
         height="500"
-        class="mx-auto"
+        class="mx-auto mb-10"
       />
+
+      <career-form />
     </v-container>
   </div>
 </template>
 
 <script>
+import CareerForm from '~/components/career/CareerForm.vue'
 import CareerHeroSection from '~/components/career/CareerHeroSection.vue'
 export default {
-  components: { CareerHeroSection },
+  components: { CareerHeroSection, CareerForm },
 }
 </script>
 

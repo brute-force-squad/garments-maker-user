@@ -7,13 +7,13 @@
             alt="Vuetify Logo"
             class="shrink mr-2"
             contain
-            src="https://firebasestorage.googleapis.com/v0/b/bareleaf-admin.appspot.com/o/logo-removebg.png?alt=media&token=ed98e02a-ae33-4abf-b217-c959eff8e116"
+            src="https://firebasestorage.googleapis.com/v0/b/garments-maker.appspot.com/o/android-chrome-192x192.png?alt=media&token=2bf99d63-48ac-4dc3-bac2-dfe7c479acda"
             transition="scale-transition"
             width="60"
           />
         </div>
       </router-link>
-      <v-toolbar-title>Bareleaf</v-toolbar-title>
+      <v-toolbar-title>GML</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
