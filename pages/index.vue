@@ -18,6 +18,14 @@
       <custom-title number="04" title="Operation Team" class="my-12" />
       <operation-teams />
     </v-container>
+    <div class="wrapper">
+      <img
+        src="../static/img/light-bulb.svg"
+        alt="light-bulb"
+        class="light-bulb"
+      />
+      <img src="../static/img/sticks.svg" alt="svg" class="sticks" />
+    </div>
   </div>
 </template>
 
@@ -42,3 +50,29 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.wrapper {
+  position: relative;
+
+  .light-bulb {
+    position: absolute;
+    left: -18rem;
+    top: -120rem;
+
+    @media only screen and (max-width: 1265px) {
+      display: none;
+    }
+  }
+
+  .sticks {
+    position: absolute;
+    top: -150rem;
+    right: -38rem;
+
+    @media only screen and (max-width: 1265px) {
+      display: none;
+    }
+  }
+}
+</style>
