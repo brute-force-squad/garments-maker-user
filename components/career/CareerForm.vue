@@ -13,7 +13,7 @@
           <v-row>
             <v-col cols="12" md="6">
               <v-text-field
-                v-model="fullname"
+                v-model="fullName"
                 label="Full Name*"
                 :rules="requiredField"
                 outlined
@@ -69,6 +69,11 @@
 export default {
   data: () => ({
     valid: true,
+    fullName: "",
+    email: "",
+    title: "",
+    cvFile: "",
+    coverLetter: "",
     requiredField: [(v) => !!v || 'Field is required'],
     validateEmail: [
       (v) => !!v || 'E-mail is required',
