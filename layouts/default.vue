@@ -51,7 +51,7 @@
     <v-main>
       <nuxt />
     </v-main>
-    <v-footer dark padless>
+    <v-footer dark padless class="mt-12">
       <v-card flat tile class="primary white--text">
         <v-card-text class="white--text pt-0">
           Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet.

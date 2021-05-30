@@ -17,6 +17,11 @@
 
     <!-- SECTION 3: STAFF NUMBER -->
     <staff-section />
+
+    <v-container>
+      <custom-title number="03" title="Other Concern" class="my-12" />
+      <other-concern />
+    </v-container>
   </div>
 </template>
 
@@ -26,7 +31,8 @@ import OurMission from '~/components/about-us/OurMission.vue'
 import OurService from '~/components/about-us/OurService.vue'
 import CustomTitle from '~/components/common/CustomTitle.vue'
 import ImageHeroSection from '~/components/common/ImageHeroSection.vue'
-import StaffSection from '~/components/staff/StaffSection.vue'
+import StaffSection from '~/components/about-us/StaffSection.vue'
+import OtherConcern from '~/components/about-us/OtherConcern.vue'
 export default {
   components: {
     ImageHeroSection,
@@ -35,6 +41,7 @@ export default {
     OurService,
     OurMission,
     StaffSection,
+    OtherConcern,
   },
 }
 </script>
