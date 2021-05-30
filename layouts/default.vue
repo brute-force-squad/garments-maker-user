@@ -76,6 +76,27 @@
 
 <script>
 export default {
+  head: {
+    title: 'Garments Maker',
+    htmlAttrs: {
+      lang: 'en',
+    },
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Garments Maker Limited | Manufacturer, Exporter & Importer',
+      },
+      {
+        name: 'keywords',
+        content:
+          'Garments Maker Ltd, Garments Maker Limited, GML, Garments, garments, grmnt, garment, garment company, maker, gml company, গার্মেন্টস, গার্মেন্টস মেকার, গার্মেন্টস মেকার লিমিটেড, exporter, manufacturer, importer, private company, private limted, private company limited, business, cloths, clothing, cloth factory, store, cloth store',
+      },
+    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+  },
   data() {
     return {
       fixed: false,
