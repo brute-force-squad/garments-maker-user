@@ -23,5 +23,6 @@ export default {
 <style lang="scss" scoped>
 .display-2 {
   font-family: 'Poppins', sans-serif !important;
+  font-weight: 600;
 }
 </style>
