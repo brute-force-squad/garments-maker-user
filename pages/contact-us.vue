@@ -46,7 +46,8 @@ export default {
   font-family: 'Poppins', sans-serif !important;
   font-weight: 600;
 }
-.body-2 {
+.body-2,
+.subtitle-1 {
   font-family: 'Poppins', sans-serif !important;
 }
 
