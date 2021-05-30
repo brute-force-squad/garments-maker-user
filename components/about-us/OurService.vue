@@ -2,16 +2,12 @@
   <div>
     <v-row>
       <v-col cols="12" md="6">
-        <div class="featureList" v-for="service in services" :key="service.id">
-          <div class="featureList_item">
-            {{ service.text }}
-          </div>
+        <div v-for="service in services" :key="service.id">
+          <list-item-view :text="service.text" />
         </div>
         <div class="heading-text">Some of our controls include</div>
-        <div class="featureList" v-for="control in controls" :key="control.id">
-          <div class="featureList_item">
-            {{ control.text }}
-          </div>
+        <div v-for="control in controls" :key="control.id">
+          <list-item-view :text="control.text" />
         </div>
       </v-col>
 
@@ -30,16 +26,18 @@
 </template>
 
 <script>
+import ListItemView from './ListItemView.vue'
 export default {
+  components: { ListItemView },
   data: () => ({
     services: [
       {
-        id: 1,
+        id: 101,
         text: 'Knitting, dyeing, sewing finishing and garments all you needs - under one roof.',
       },
-      { id: 2, text: 'Equipped with top of the line production facilities.' },
-      { id: 3, text: 'Environmentally committed apparel producer.' },
-      { id: 4, text: 'Composite textile for your composite satisfaction' },
+      { id: 102, text: 'Equipped with top of the line production facilities.' },
+      { id: 103, text: 'Environmentally committed apparel producer.' },
+      { id: 104, text: 'Composite textile for your composite satisfaction' },
     ],
     controls: [
       { id: 1, text: 'Factory evaluations.' },
@@ -68,43 +66,5 @@ export default {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   margin: 1.5rem 0;
-}
-
-.featureList {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  flex-flow: column nowrap;
-  margin-top: 30px;
-
-  .featureList_item {
-    padding-left: 32px;
-    font-size: 17px;
-    color: #19061c;
-    line-height: 168%;
-    position: relative;
-    // margin-bottom: 24px;
-
-    &::before {
-      content: '';
-      width: 22px;
-      height: 22px;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: url('../../static/img/check_circle.svg') center no-repeat;
-      background-size: 22px;
-      background-size: contain;
-      position: absolute;
-      left: 0;
-      top: 4px;
-    }
-  }
 }
 </style>

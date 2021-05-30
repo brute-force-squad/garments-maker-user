@@ -9,6 +9,9 @@
       <!-- SECTION 1: OUR SERVICE -->
       <custom-title number="01" title="Our Service" class="my-12" />
       <our-service />
+
+      <!-- SECTION 2: OUR MISSIONS -->
+      <custom-title number="02" title="Our Mission" class="my-12" />
     </v-container>
   </div>
 </template>
