@@ -24,7 +24,7 @@
         alt="light-bulb"
         class="light-bulb"
       />
-      <img src="../static/img/sticks.svg" alt="svg" class="sticks" />
+      <!-- <img src="../static/img/sticks.svg" alt="svg" class="sticks" /> -->
     </div>
   </div>
 </template>
@@ -65,14 +65,5 @@ export default {
     }
   }
 
-  .sticks {
-    position: absolute;
-    top: -150rem;
-    right: -38rem;
-
-    @media only screen and (max-width: 1265px) {
-      display: none;
-    }
-  }
 }
 </style>
