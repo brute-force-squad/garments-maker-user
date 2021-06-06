@@ -48,6 +48,9 @@ export default {
     WhatWeDo,
     OperationTeams,
   },
+  created() {
+    this.$store.dispatch('getProducts')
+  },
 }
 </script>
 
@@ -64,6 +67,5 @@ export default {
       display: none;
     }
   }
-
 }
 </style>
