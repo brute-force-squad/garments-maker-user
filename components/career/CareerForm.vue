@@ -15,7 +15,7 @@
         </div>
       </v-col>
       <v-col cols="12" md="8">
-        <v-form ref="form" v-model="valid">
+        <v-form ref="form" v-model="valid" @submit.prevent="handleSubmit">
           <v-row>
             <v-col cols="12" md="6">
               <v-text-field
@@ -43,12 +43,13 @@
             </v-col>
             <v-col cols="12" md="6">
               <v-file-input
-                v-model="cvFile"
                 outlined
                 label="Attach Your Resume*"
                 accept="image/* , application/msword , application/vnd.openxmlformats-officedocument.wordprocessingml.document , application/pdf"
-                :rules="requiredFile"
+                :rules="requiredField"
                 prepend-icon=""
+                :loading="fileLoading"
+                @change="handleFileChange"
               />
             </v-col>
             <v-col cols="12">
@@ -63,7 +64,13 @@
           </v-row>
 
           <div class="d-flex justify-end">
-            <v-btn :disabled="!valid" color="primary" class="mr-4">
+            <v-btn
+              :disabled="!valid"
+              color="primary"
+              class="mr-4"
+              :loading="isLoading"
+              type="submit"
+            >
               Apply now
             </v-btn>
           </div>
@@ -74,13 +81,14 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   data: () => ({
     valid: true,
     fullName: '',
     email: '',
     title: '',
-    cvFile: null,
+    fileLoading: false,
     coverLetter: '',
     requiredField: [(v) => !!v || 'Field is required'],
     validateEmail: [
@@ -88,6 +96,26 @@ export default {
       (v) => /.+@.+\..+/.test(v) || 'E-mail must be valid',
     ],
   }),
+  computed: {
+    ...mapState(['isLoading']),
+  },
+  methods: {
+    handleFileChange(file) {
+      this.fileLoading = true
+      this.$store
+        .dispatch('uploadResume', file)
+        .finally(() => (this.fileLoading = false))
+    },
+    handleSubmit() {
+      this.$store.dispatch('addCareerInfo', {
+        fullName: this.fullName,
+        email: this.email,
+        position: this.title,
+        coverLetter: this.coverLetter,
+      })
+      this.$refs.form.reset()
+    },
+  },
 }
 </script>
 

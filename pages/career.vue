@@ -17,14 +17,16 @@
 
       <career-form />
     </v-container>
+    <the-snackbar />
   </div>
 </template>
 
 <script>
 import CareerForm from '~/components/career/CareerForm.vue'
 import CareerHeroSection from '~/components/career/CareerHeroSection.vue'
+import TheSnackbar from '~/components/common/TheSnackbar.vue'
 export default {
-  components: { CareerHeroSection, CareerForm },
+  components: { CareerHeroSection, CareerForm, TheSnackbar },
 }
 </script>
 

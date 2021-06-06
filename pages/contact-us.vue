@@ -29,15 +29,17 @@
         <contact-map />
       </v-row>
     </v-container>
+    <the-snackbar />
   </div>
 </template>
 
 <script>
+import TheSnackbar from '~/components/common/TheSnackbar.vue'
 import ContactMap from '~/components/contact-us/ContactMap.vue'
 import ContactUsForm from '~/components/contact-us/ContactUsForm.vue'
 import ContactUsHeroSection from '~/components/contact-us/ContactUsHeroSection.vue'
 export default {
-  components: { ContactUsHeroSection, ContactUsForm, ContactMap },
+  components: { ContactUsHeroSection, ContactUsForm, ContactMap, TheSnackbar },
 }
 </script>
 

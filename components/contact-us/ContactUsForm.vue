@@ -1,5 +1,5 @@
 <template>
-  <v-form ref="form" v-model="valid">
+  <v-form ref="form" v-model="valid" @submit.prevent="handleSubmit">
     <v-row>
       <v-col cols="12" md="6">
         <v-text-field
@@ -27,7 +27,13 @@
       </v-col>
     </v-row>
     <div class="d-flex justify-end">
-      <v-btn :disabled="!valid" color="primary" class="mr-4">
+      <v-btn
+        :disabled="!valid"
+        color="primary"
+        class="mr-4"
+        type="submit"
+        :loading="isLoading"
+      >
         Send Message
       </v-btn>
     </div>
@@ -35,6 +41,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   data: () => ({
     valid: true,
@@ -47,6 +54,19 @@ export default {
       (v) => /.+@.+\..+/.test(v) || 'E-mail must be valid',
     ],
   }),
+  computed: {
+    ...mapState(['isLoading']),
+  },
+  methods: {
+    handleSubmit() {
+      this.$store.dispatch('createNewContact', {
+        fullName: this.fullName,
+        email: this.email,
+        message: this.message,
+      })
+      this.$refs.form.reset()
+    },
+  },
 }
 </script>
 
