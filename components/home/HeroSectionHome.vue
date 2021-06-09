@@ -1,7 +1,7 @@
 <template>
   <div class="showcase">
-    <video src="../../static/video/cloth.mp4" muted autoplay loop />
-    <div class="overlay"></div>
+    <!-- <video src="../../static/video/cloth.mp4" muted autoplay loop />
+    <div class="overlay"></div> -->
     <div class="text">
       <div class="overline">Manufacturer, Exporter & Importer</div>
       <div class="display-2">Garments Maker Limited</div>
@@ -20,26 +20,32 @@ export default {}
 .showcase {
   position: relative;
   height: 80vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(https://firebasestorage.googleapis.com/v0/b/garments-maker.appspot.com/o/homepage.jpg?alt=media&token=04e39b1d-0aa3-4c9a-ba22-31af488c264d);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-  video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-  }
+  // video {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   object-fit: cover;
+  //   z-index: 1;
+  // }
 
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-  }
+  // .overlay {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: rgba(0, 0, 0, 0.5);
+  //   z-index: 1;
+  // }
 
   .text {
     position: relative;

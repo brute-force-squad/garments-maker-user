@@ -17,7 +17,7 @@ export default {
   width: 100%;
   height: 80vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('https://firebasestorage.googleapis.com/v0/b/garments-maker.appspot.com/o/contact.jpg?alt=media&token=9a2e208b-6306-4a56-bdc3-3539fa6f1eea');
+    url(https://firebasestorage.googleapis.com/v0/b/garments-maker.appspot.com/o/contact.jpg?alt=media&token=164a4932-e7d7-468a-a3a6-60500ed39a03);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
