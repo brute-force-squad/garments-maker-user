@@ -164,7 +164,7 @@ export default {
 }
 
 a {
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
 }
 </style>
