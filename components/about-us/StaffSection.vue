@@ -18,7 +18,7 @@ export default {}
   width: 100%;
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../../static/img/office.jpg);
+    url(https://firebasestorage.googleapis.com/v0/b/garments-maker.appspot.com/o/office.jpg?alt=media&token=d559c5bd-b2b5-4da6-ac28-e0cdda1e11a4);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
