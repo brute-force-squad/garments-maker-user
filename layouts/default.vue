@@ -69,7 +69,7 @@
           </v-col>
 
           <v-col cols="12" md="6">
-            <v-list color="transparent">
+            <v-list color="transparent" class="footer-list">
               <v-list-item>
                 <v-list-item-icon>
                   <v-icon>mdi-phone</v-icon>
@@ -163,8 +163,10 @@ export default {
   font-family: 'Poppins', sans-serif !important;
 }
 
-a {
-  color: #fff !important;
-  text-decoration: none;
+.footer-list {
+  a {
+    color: #fff !important;
+    text-decoration: none;
+  }
 }
 </style>
