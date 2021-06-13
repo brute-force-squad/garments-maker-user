@@ -134,15 +134,12 @@ export default {
           'Garments Maker Ltd, Garments Maker Limited, GML, Garments, garments, grmnt, garment, garment company, maker, gml company, গার্মেন্টস, গার্মেন্টস মেকার, গার্মেন্টস মেকার লিমিটেড, exporter, manufacturer, importer, private company, private limted, private company limited, business, cloths, clothing, cloth factory, store, cloth store, https://gml-user.themebuysell.com',
       },
       {
-        property: "og:type",
-        content: "website"
+        property: 'og:type',
+        content: 'website',
       },
       {
-        property: "og:url",
-        content: "https://gml-user.themebuysell.com/"
-      },
-      {
-        property="og:image", content="https://firebasestorage.googleapis.com/v0/b/garments-maker.appspot.com/o/android-chrome-192x192.png?alt=media&token=2bf99d63-48ac-4dc3-bac2-dfe7c479acda"
+        property: 'og:url',
+        content: 'https://gml-user.themebuysell.com/',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
