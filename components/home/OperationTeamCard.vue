@@ -30,7 +30,7 @@ export default {
     position: absolute;
     font-size: 110px;
     bottom: -7%;
-    right: -12%;
+    right: -10%;
     opacity: 0.3;
   }
 }
