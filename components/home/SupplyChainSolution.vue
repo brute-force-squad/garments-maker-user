@@ -2,7 +2,7 @@
   <div class="mt-12">
     <v-row>
       <v-col cols="12">
-        <div class="display-1 mb-4">Supply Chain Innovation</div>
+        <div class="display-2 mb-4">Supply Chain Innovation</div>
         <p class="bold">
           We convene the global supply chain creating customized, end-to-end
           supply chain and logistics solutions for brands and retailers. What
@@ -59,9 +59,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.display-1,
+.display-2,
 .title {
   font-family: 'Poppins', sans-serif !important;
+}
+.title {
   font-weight: 600 !important;
 }
 </style>

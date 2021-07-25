@@ -2,7 +2,7 @@
   <div>
     <v-row>
       <v-col cols="12">
-        <div class="display-1 mt-12 mb-4">About Garments Maker Limited</div>
+        <div class="display-2 mt-12 mb-4">About Garments Maker Limited</div>
         <p class="bold">
           Garments Maker Ltd. is a garment exporter and sourcing company created
           to match potential buyers with ideal suppliers. We aim to find our
@@ -66,9 +66,11 @@ export default {}
 .display-1,
 .title {
   font-family: 'Poppins', sans-serif !important;
-  font-weight: 600;
 }
 .icon {
   font-size: 2.5em;
+}
+.title {
+  font-weight: 600;
 }
 </style>
