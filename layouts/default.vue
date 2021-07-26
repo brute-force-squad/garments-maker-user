@@ -17,7 +17,7 @@
 
       <v-spacer></v-spacer>
 
-      <div class="d-none d-sm-flex">
+      <div class="d-none d-md-flex">
         <v-btn
           v-for="item in items"
           :key="item.title"
@@ -30,7 +30,7 @@
           {{ item.title }}
         </v-btn>
       </div>
-      <div class="d-flex d-sm-none">
+      <div class="d-flex d-md-none">
         <v-menu left bottom rounded="lg" transition="scale-transition">
           <template v-slot:activator="{ on, attrs }">
             <v-btn icon v-bind="attrs" v-on="on" aria-label="menu">
@@ -149,9 +149,10 @@ export default {
       fixed: false,
       items: [
         { title: 'Home', to: '/' },
-        { title: 'About Us', to: '/about-us' },
-        { title: 'Products', to: '/products' },
-        { title: 'Our Clients', to: '/our-clients' },
+        { title: 'Our Strategy', to: '/our-strategy' },
+        { title: 'About GML', to: '/about-us' },
+        { title: 'Supply Chain Innovation', to: '/supply-chain' },
+        { title: 'Gallery', to: '/gallery' },
         { title: 'Career', to: '/career' },
         { title: 'Contact Us', to: '/contact-us' },
       ],

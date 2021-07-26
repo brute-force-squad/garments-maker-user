@@ -1,6 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" md="6">
+      <div class="display-2 mt-12 mb-6">Our Concern</div>
       <div v-for="concern in concerns" :key="concern.id">
         <list-item-view :text="concern.text" />
       </div>
@@ -34,4 +35,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.display-2 {
+  font-family: 'Poppins', sans-serif !important;
+}
+</style>

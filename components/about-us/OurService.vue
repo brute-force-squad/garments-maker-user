@@ -2,6 +2,7 @@
   <div>
     <v-row>
       <v-col cols="12" md="6">
+        <div class="display-2 mt-12 mb-6">Our Services</div>
         <div v-for="service in services" :key="service.id">
           <list-item-view :text="service.text" />
         </div>
@@ -11,14 +12,13 @@
         </div>
       </v-col>
 
-      <v-col cols="12" md="6">
+      <v-col cols="12" md="6" class="service-image">
         <v-img
           lazy-src="https://firebasestorage.googleapis.com/v0/b/garments-maker.appspot.com/o/lazy-service.png?alt=media&token=56a1b93a-87c5-4352-a7f8-0ff509931493"
           src="https://firebasestorage.googleapis.com/v0/b/garments-maker.appspot.com/o/service.png?alt=media&token=1edbed9d-0fe4-487c-8263-1085df7f57dc"
           contain
           height="500"
           width="500"
-          class="my-auto mx-auto"
         />
       </v-col>
     </v-row>
@@ -61,10 +61,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.display-2 {
+  font-family: 'Poppins', sans-serif !important;
+}
 .heading-text {
   font-size: 26px;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   margin: 1.5rem 0;
+}
+.service-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
