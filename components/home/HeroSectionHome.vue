@@ -8,8 +8,7 @@
     />
     <div class="overlay"></div>
     <div class="text">
-      <div class="overline">Manufacturer, Exporter & Importer</div>
-      <div class="display-2">Garments Maker Limited</div>
+      <div class="display-3 mb-2">Garments Maker Limited</div>
       <div class="subtitle-1">
         Leading Company of Bangladesh in Garments Industry
       </div>
@@ -60,27 +59,25 @@ export default {}
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 5em;
+    align-items: center;
+    // margin-left: 5em;
     .overline,
-    .display-2,
+    .display-3,
     .subtitle-1 {
       font-family: 'Poppins', sans-serif !important;
     }
-    .display-2 {
-      margin-left: -4px;
-    }
   }
 
-  .subtitle-1::after {
-    content: '';
-    position: absolute;
-    height: 8px;
-    width: 5em;
-    background-color: #ffa800;
-    bottom: 37%;
-    left: 0;
-    border-radius: 20px;
-  }
+  // .subtitle-1::after {
+  //   content: '';
+  //   position: absolute;
+  //   height: 8px;
+  //   width: 5em;
+  //   background-color: #ffa800;
+  //   bottom: 37%;
+  //   left: 0;
+  //   border-radius: 20px;
+  // }
 
   @media only screen and (max-width: 600px) {
     .text {
@@ -91,8 +88,8 @@ export default {}
       display: none;
     }
 
-    .display-2 {
-      font-size: 1.8em !important;
+    .display-3 {
+      font-size: 2em !important;
     }
   }
 }
