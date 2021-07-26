@@ -25,7 +25,7 @@
     </v-row>
     <v-row>
       <v-col cols="12" sm="6">
-        <v-card flat>
+        <v-card flat class="card">
           <v-card-title>
             <v-icon class="icon" color="secondary">mdi-bullseye-arrow</v-icon>
           </v-card-title>
@@ -35,14 +35,14 @@
             alone and are using our convening power to enable collaboration and
             partnerships to make positive impacts that are scalable and
             sustainable.
-            <div class="title mt-4">OUR PURPOSE</div>
+            <div class="card-title mt-4">OUR PURPOSE</div>
           </v-card-text>
         </v-card>
       </v-col>
       <v-col cols="12" sm="6">
-        <v-card flat>
+        <v-card flat class="card">
           <v-card-title>
-            <v-icon class="icon" color="secondary">mdi-earth</v-icon>
+            <v-icon class="icon earth" color="secondary">mdi-earth</v-icon>
           </v-card-title>
           <v-card-text>
             We operate one of the most extensive global supply chain networks in
@@ -50,7 +50,7 @@
             40 different markets. Leveraging our convening power, we bring
             together diverse players in the supply chain to enact change for the
             benefit of our industry.
-            <div class="title mt-4">OUR REACH</div>
+            <div class="card-title mt-4">OUR REACH</div>
           </v-card-text>
         </v-card>
       </v-col>
@@ -66,6 +66,31 @@ export default {}
 .display-2,
 .title {
   font-family: 'Poppins', sans-serif !important;
+}
+.card {
+  .earth {
+    animation: circle 2s linear infinite;
+  }
+
+  .card-title {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+
+  @keyframes circle {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  &:hover {
+    .card-title {
+      color: #f59e0b !important;
+    }
+  }
 }
 .icon {
   font-size: 2.5em;

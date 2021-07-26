@@ -32,21 +32,23 @@
             chain will help us better predict and interact with our customers
             faster and more creatively. Speed, innovation and digitalization are
             key to building the supply chain of the future.
-            <div class="title mt-4">STRATEGIC DIRECTION</div>
+            <div class="card-title mt-4">STRATEGIC DIRECTION</div>
           </v-card-text>
         </v-card>
       </v-col>
       <v-col cols="12" sm="6">
         <v-card flat class="card">
           <v-card-title>
-            <v-icon class="icon" color="secondary"> mdi-autorenew</v-icon>
+            <v-icon class="icon autorenew" color="secondary">
+              mdi-autorenew</v-icon
+            >
           </v-card-title>
           <v-card-text>
             We responsibly manage our environmental, social and governance
             performance and work with our customers, suppliers and industry
             partners to further the sustainability of supply chains and
             communities across our ecosystem.
-            <div class="title mt-4">SUSTAINABILITY STRATEGY</div>
+            <div class="card-title mt-4">SUSTAINABILITY STRATEGY</div>
           </v-card-text>
         </v-card>
       </v-col>
@@ -63,15 +65,27 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  transition: all 0.5s;
+  .autorenew {
+    animation: circle 2s linear infinite;
+  }
 
-  .title {
-    opacity: 0;
+  .card-title {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+
+  @keyframes circle {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
   &:hover {
-    .title {
-      opacity: 1;
+    .card-title {
+      color: #f59e0b !important;
     }
   }
 }
