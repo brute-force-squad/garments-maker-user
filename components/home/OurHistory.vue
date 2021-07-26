@@ -79,6 +79,7 @@ export default {
 .title {
   font-family: 'Poppins', sans-serif !important;
 }
+
 .icon {
   font-size: 2.5em;
 }

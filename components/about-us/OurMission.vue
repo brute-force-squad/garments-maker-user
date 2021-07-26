@@ -1,30 +1,30 @@
 <template>
   <div>
-    <div v-for="mission in missions" :key="mission.id">
-      <list-item-view :text="mission.text" />
-    </div>
+    <div class="display-2 mt-12 mb-6">Our Mission</div>
+    <p class="bold">
+      Our mission is to become the leading exporter & sourcing company in the
+      industry by providing excellent service to our clients at a competitive
+      price point.
+    </p>
+
+    <p>
+      We are constantly putting our best efforts to source trendy & superior
+      quality garments material from ethical and sustainable suppliers. We also
+      want to share our success by giving back to the society. This will be
+      achieved through providing fare wages to the workers, introducing a green
+      production facility and contributing to the education of underprivileged
+      children.
+    </p>
+    <p>
+      By accomplishing these series of actions, we want to establish Garments
+      Maker as a brand which will be represented by its dedication towards
+      sustainability, customer satisfaction and value creation.
+    </p>
   </div>
 </template>
 
-<script>
-import ListItemView from './ListItemView.vue'
-export default {
-  components: { ListItemView },
-  data: () => ({
-    missions: [
-      { id: 1, text: 'To satisfy customers with superior quality and value.' },
-      { id: 2, text: 'To meet the goal we are committed to putting the best.' },
-      {
-        id: 3,
-        text: 'Endeavors and work as a team efficiently for continual.',
-      },
-      {
-        id: 4,
-        text: 'Improvement of the quality management system. The management ensures the employee’s benefits and Provide training to improve their skills to the desired level.',
-      },
-    ],
-  }),
+<style lang="scss" scoped>
+.display-2 {
+  font-family: 'Poppins', sans-serif !important;
 }
-</script>
-
-<style lang="scss" scoped></style>
+</style>

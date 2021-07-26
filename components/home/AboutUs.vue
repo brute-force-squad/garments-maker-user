@@ -63,7 +63,7 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-.display-1,
+.display-2,
 .title {
   font-family: 'Poppins', sans-serif !important;
 }

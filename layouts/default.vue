@@ -151,7 +151,7 @@ export default {
         { title: 'Home', to: '/' },
         { title: 'Our Strategy', to: '/our-strategy' },
         { title: 'About GML', to: '/about-us' },
-        { title: 'Supply Chain Innovation', to: '/about-us' },
+        { title: 'Supply Chain Innovation', to: '/supply-chain' },
         { title: 'Our Clients', to: '/our-clients' },
         { title: 'Career', to: '/career' },
         { title: 'Contact Us', to: '/contact-us' },

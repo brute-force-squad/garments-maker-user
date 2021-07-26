@@ -7,11 +7,11 @@
       <initial-section />
 
       <!-- SECTION 1: OUR SERVICE -->
-      <custom-title number="01" title="Our Service" class="my-12" />
+      <!-- <custom-title number="01" title="Our Service" class="my-12" /> -->
       <our-service />
 
       <!-- SECTION 2: OUR MISSIONS -->
-      <custom-title number="02" title="Our Mission" class="my-12" />
+      <!-- <custom-title number="02" title="Our Mission" class="my-12" /> -->
       <our-mission />
     </v-container>
 
@@ -19,7 +19,7 @@
     <staff-section />
 
     <v-container>
-      <custom-title number="03" title="Other Concern" class="my-12" />
+      <!-- <custom-title number="03" title="Other Concern" class="my-12" /> -->
       <other-concern />
     </v-container>
   </div>
