@@ -2,19 +2,24 @@
   <div>
     <hero-section />
     <v-container>
-      <div class="display-2 text-center my-8">Our Valuable Clients</div>
+      <div class="display-2 text-center my-8">Gallery</div>
       <v-row>
-        <v-col cols="12" md="6">
-          <client-table />
-        </v-col>
-        <v-col cols="12" md="6">
+        <v-col v-for="n in 9" :key="n" class="d-flex child-flex" cols="4">
           <v-img
-            lazy-src="https://firebasestorage.googleapis.com/v0/b/garments-maker.appspot.com/o/lazy-client.png?alt=media&token=2f614267-e13c-4174-a1fd-5fde3b364eb4"
-            src="https://firebasestorage.googleapis.com/v0/b/garments-maker.appspot.com/o/clients.png?alt=media&token=7e5e73d1-e664-48dd-af44-91dcfc2ad928"
-            contain
-            height="400"
-            class="mx-auto"
-          />
+            :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
+            :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+            aspect-ratio="1"
+            class="grey lighten-2"
+          >
+            <template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="grey lighten-5"
+                ></v-progress-circular>
+              </v-row>
+            </template>
+          </v-img>
         </v-col>
       </v-row>
     </v-container>
