@@ -14,7 +14,7 @@
             contain
             src="https://firebasestorage.googleapis.com/v0/b/garments-maker.appspot.com/o/android-chrome-192x192.png?alt=media&token=2bf99d63-48ac-4dc3-bac2-dfe7c479acda"
             transition="scale-transition"
-            width="60"
+            width="50"
           />
         </div>
       </router-link>
