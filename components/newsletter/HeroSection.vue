@@ -15,7 +15,7 @@ export default {
 <style lang="scss" scoped>
 .banner-area {
   width: 100%;
-  height: 80vh;
+  height: 50vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(https://firebasestorage.googleapis.com/v0/b/garments-maker.appspot.com/o/newsletter.jpg?alt=media&token=4a06707e-82c5-4c06-a04f-7603d9a9f60e);
   background-size: cover;

@@ -58,7 +58,7 @@
 <style lang="scss" scoped>
 .banner-area {
   width: 100%;
-  height: 80vh;
+  height: 50vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(https://firebasestorage.googleapis.com/v0/b/garments-maker.appspot.com/o/supplychain.jpg?alt=media&token=52d25a3c-15df-4810-b3db-8bc3467ca05f);
   background-size: cover;

@@ -1,6 +1,7 @@
 <template>
   <v-app dark>
     <v-app-bar app color="primary" dark class="app-depth">
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <router-link to="/">
         <div class="d-flex align-center">
           <v-img
@@ -61,28 +62,24 @@
       </div>
 
       <!-- shows in mobile mood -->
-      <div class="d-flex d-md-none">
-        <v-menu left bottom rounded="lg" transition="scale-transition">
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn icon v-bind="attrs" v-on="on" aria-label="menu">
-              <v-icon>mdi-menu</v-icon>
-            </v-btn>
-          </template>
-
-          <v-list>
-            <v-list-item
-              v-for="item in mainItems"
-              :key="item.title"
-              :to="item.to"
-            >
-              <v-list-item-title class="primary-font">
-                {{ item.title }}
-              </v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-menu>
-      </div>
     </v-app-bar>
+    <v-navigation-drawer v-model="drawer" temporary fixed>
+      <v-list nav>
+        <v-list-item-group active-class="blue-grey--text text--darken-4">
+          <v-list-item
+            v-for="item in mainItems"
+            :key="item.title"
+            :to="item.to"
+          >
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Buzz</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
 
     <!-- main body -->
     <v-main>
@@ -185,6 +182,7 @@ export default {
   },
   data() {
     return {
+      drawer: false,
       fixed: false,
       mainItems: [
         { title: 'Home', to: '/' },
@@ -204,10 +202,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.app-depth {
-  z-index: 100;
-}
-
 .title,
 .subtitle-1,
 .body-2 {
