@@ -17,9 +17,10 @@
 
       <v-spacer></v-spacer>
 
+      <!-- shows in desktop mode -->
       <div class="d-none d-md-flex">
         <v-btn
-          v-for="item in items"
+          v-for="item in mainItems"
           :key="item.title"
           class="mr-3 text-capitalize"
           :to="item.to"
@@ -29,7 +30,37 @@
         >
           {{ item.title }}
         </v-btn>
+
+        <!-- sub items -->
+        <v-menu left bottom rounded="lg" transition="scale-transition">
+          <template v-slot:activator="{ attrs, on }">
+            <v-btn
+              class="mr-3 text-capitalize"
+              v-bind="attrs"
+              v-on="on"
+              depressed
+              plain
+              text
+            >
+              Others
+            </v-btn>
+          </template>
+
+          <v-list>
+            <v-list-item
+              v-for="item in subItems"
+              :key="item.title"
+              :to="item.to"
+            >
+              <v-list-item-title class="primary-font">
+                {{ item.title }}
+              </v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
       </div>
+
+      <!-- shows in mobile mood -->
       <div class="d-flex d-md-none">
         <v-menu left bottom rounded="lg" transition="scale-transition">
           <template v-slot:activator="{ on, attrs }">
@@ -39,18 +70,26 @@
           </template>
 
           <v-list>
-            <v-list-item v-for="item in items" :key="item.title" :to="item.to">
-              <v-list-item-title class="primary-font">{{
-                item.title
-              }}</v-list-item-title>
+            <v-list-item
+              v-for="item in mainItems"
+              :key="item.title"
+              :to="item.to"
+            >
+              <v-list-item-title class="primary-font">
+                {{ item.title }}
+              </v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
       </div>
     </v-app-bar>
+
+    <!-- main body -->
     <v-main>
       <nuxt />
     </v-main>
+
+    <!-- footer -->
     <v-footer dark padless class="mt-12 primary">
       <v-container>
         <div class="text-center title">Garments Maker LTD</div>
@@ -147,14 +186,17 @@ export default {
   data() {
     return {
       fixed: false,
-      items: [
+      mainItems: [
         { title: 'Home', to: '/' },
-        { title: 'Our Strategy', to: '/our-strategy' },
         { title: 'About GML', to: '/about-us' },
-        { title: 'Supply Chain Innovation', to: '/supply-chain' },
-        { title: 'Gallery', to: '/gallery' },
-        { title: 'Career', to: '/career' },
+        { title: 'Our Strategy', to: '/our-strategy' },
+        { title: 'Products', to: '/products' },
         { title: 'Contact Us', to: '/contact-us' },
+      ],
+      subItems: [
+        { title: 'Gallery', to: '/gallery' },
+        { title: 'Newsletter', to: '/newsletters' },
+        { title: 'Career', to: '/career' },
       ],
     }
   },

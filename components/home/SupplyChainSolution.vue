@@ -2,34 +2,32 @@
   <div class="mt-12">
     <v-row>
       <v-col cols="12">
-        <div class="display-2 mb-4">Supply Chain Innovation</div>
-        <p class="bold">
-          We convene the global supply chain creating customized, end-to-end
-          supply chain and logistics solutions for brands and retailers. What
-          sets us apart is our high degree of flexibility and scalability which
-          is unrivaled in our industry.
+        <div class="display-2 mb-4">Supply Chain Approaches</div>
+        <p>
+          Garment products have a short shelf life and do not stay in fashion
+          for a longer time. A little delay in the delivery of the products can
+          cause significant losses. This is why our supply chain unit always
+          makes sure that our clients receive their deliveries within the
+          promised time.
         </p>
         <p>
-          Millions of consumer goods pass through Li & Fung’s supply chain every
-          year. For that to happen, we connect thousands of suppliers and
-          vendors with leading brands and retailers, all with the goal of
-          meeting consumer demand.
-        </p>
-        <div class="title my-6">
-          We are creating the supply chain of the future
-        </div>
-        <p>
+          The supply chain unit factors in production schedules, location,
+          specific holidays and other critical matters to make sure the products
+          are always delivered on time. We want to be known for our prompt
+          delivery service. Our clients can expect a lead-time of 35-120 days
+          depending on the category of the product and the sourcing location.
           Traditional supply chain management is undergoing massive change
-          driven by disruptive technologies in the retail industry.
-        </p>
-        <p>
-          Starting with product design and development and including everything
-          from compliance to raw material and factory sourcing, manufacturing
+          driven by disruptive technologies in the retail industry.Starting with
+          product design and development and including everything from
+          compliance to raw material and factory sourcing, manufacturing
           control, logistics, and more, we offer end-to-end services for all
-          stakeholders in the consumer goods industry. Our offices and teams are
-          based in all key production markets, giving us the expertise and
-          extensive network of supply chain partners needed to meet the diverse
-          needs of our global customers.
+          stakeholders in the consumer goods industry.
+        </p>
+        <p></p>
+        <p>
+          Our offices and teams are based in all key production markets, giving
+          us the expertise and extensive network of supply chain partners needed
+          to meet the diverse needs of our global customers.
         </p>
       </v-col>
     </v-row>

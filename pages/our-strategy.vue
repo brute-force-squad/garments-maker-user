@@ -2,10 +2,10 @@
   <div>
     <strategy-hero-section />
     <v-container>
-      <div class="title mt-12 mb-2">
+      <p class="mt-12 mb-2">
         We are facing an era of exponential change. The convergence of
         technologies has changed the way consumers and businesses interact
-      </div>
+      </p>
       <p>
         Data-driven insights allow us to better predict and interact with
         customers faster and more creatively. Today’s consumers are always
@@ -21,7 +21,7 @@
       <v-row>
         <v-col cols="12" md="8">
           <div class="display-1 mt-12 mb-4">Speed</div>
-          <p class="bold">
+          <p>
             Speed is the first thing our customers demand from us to stay
             competitive. To help them succeed, we are focused on strategic
             investments to leverage new technologies, optimize processes and
@@ -62,7 +62,7 @@
         </v-col>
         <v-col cols="12" md="8">
           <div class="display-1 mt-12 mb-4">Innovations</div>
-          <p class="bold">
+          <p>
             Mobile-enabled, mass-customized products and services are the new
             norm. Brands and retailers are challenged to respond rapidly to
             changes in consumer expectations.
@@ -99,7 +99,7 @@
       <v-row class="mt-6">
         <v-col cols="12" md="8">
           <div class="display-1 mt-12 mb-4">Digitalization</div>
-          <p class="bold">
+          <p>
             Digitalization is about creating the future of end-to-end digital
             supply chains. It means transforming all elements of the supply
             chain and analyzing the data to provide valuable insights and

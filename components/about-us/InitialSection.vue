@@ -2,7 +2,7 @@
   <div>
     <v-row>
       <v-col cols="12" md="8">
-        <p class="mt-6 bold">
+        <p class="mt-6">
           Garments Maker Ltd. is a garment exporter and sourcing company created
           to match potential buyers with ideal suppliers.
         </p>
