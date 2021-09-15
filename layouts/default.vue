@@ -1,7 +1,11 @@
 <template>
   <v-app dark>
     <v-app-bar app color="primary" dark class="app-depth">
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon
+        @click="drawer = !drawer"
+        class="d-flex d-md-none"
+      ></v-app-bar-nav-icon>
+
       <router-link to="/">
         <div class="d-flex align-center">
           <v-img
@@ -18,7 +22,6 @@
 
       <v-spacer></v-spacer>
 
-      <!-- shows in desktop mode -->
       <div class="d-none d-md-flex">
         <v-btn
           v-for="item in mainItems"
@@ -60,9 +63,8 @@
           </v-list>
         </v-menu>
       </div>
-
-      <!-- shows in mobile mood -->
     </v-app-bar>
+
     <v-navigation-drawer v-model="drawer" temporary fixed>
       <v-list nav>
         <v-list-item-group active-class="blue-grey--text text--darken-4">
@@ -74,9 +76,17 @@
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
-            <v-list-item-title>Buzz</v-list-item-title>
-          </v-list-item>
+          <v-list-group :value="true">
+            <template v-slot:activator>
+              <v-list-item-content>
+                <v-list-item-title>Others</v-list-item-title>
+              </v-list-item-content>
+            </template>
+
+            <v-list-item v-for="(item, i) in subItems" :key="i" :to="item.to">
+              <v-list-item-title v-text="item.title"></v-list-item-title>
+            </v-list-item>
+          </v-list-group>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>

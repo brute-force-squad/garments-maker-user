@@ -2,7 +2,7 @@
   <div>
     <hero-section />
     <v-container>
-      <div class="display-2 text-center my-8">Newsletter</div>
+      <div class="title text-center my-8">Our Newsletters</div>
       <v-row>
         <v-col cols="12" sm="6" md="4">
           <v-card>

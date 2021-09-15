@@ -69,6 +69,7 @@ export default {}
   color: '#3e3e3e';
 }
 .card {
+  border-radius: 12px;
   .earth {
     animation: circle 2s linear infinite;
   }
