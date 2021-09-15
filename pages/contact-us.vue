@@ -2,8 +2,7 @@
   <div>
     <contact-us-hero-section />
     <v-container>
-      <div class="display-2 text-center my-8">Contact With Us</div>
-      <div class="body-2 text-center mb-12">
+      <div class="title text-center my-12">
         If you have any kind of query or anything to say, please reach us from
         below.
       </div>

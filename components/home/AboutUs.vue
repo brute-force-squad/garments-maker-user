@@ -3,7 +3,7 @@
     <v-row>
       <v-col cols="12">
         <div class="display-2 mt-12 mb-4">About Garments Maker Limited</div>
-        <p class="bold">
+        <p>
           Garments Maker Ltd. is a garment exporter and sourcing company created
           to match potential buyers with ideal suppliers. We aim to find our
           clients the perfect suppliers who will not only provide pristine
@@ -25,7 +25,7 @@
     </v-row>
     <v-row>
       <v-col cols="12" sm="6">
-        <v-card flat class="card">
+        <v-card outlined class="card">
           <v-card-title>
             <v-icon class="icon" color="secondary">mdi-bullseye-arrow</v-icon>
           </v-card-title>
@@ -40,7 +40,7 @@
         </v-card>
       </v-col>
       <v-col cols="12" sm="6">
-        <v-card flat class="card">
+        <v-card outlined class="card">
           <v-card-title>
             <v-icon class="icon earth" color="secondary">mdi-earth</v-icon>
           </v-card-title>
@@ -48,7 +48,7 @@
             We operate one of the most extensive global supply chain networks in
             the world with some 15,000 people in more than 230 locations across
             40 different markets. Leveraging our convening power, we bring
-            together diverse players in the supply chain to enact change for the
+            together diverse players in the supply chain to change for the
             benefit of our industry.
             <div class="card-title mt-4">OUR REACH</div>
           </v-card-text>
@@ -66,8 +66,10 @@ export default {}
 .display-2,
 .title {
   font-family: 'Poppins', sans-serif !important;
+  color: '#3e3e3e';
 }
 .card {
+  border-radius: 12px;
   .earth {
     animation: circle 2s linear infinite;
   }

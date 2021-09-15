@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="display-2 mt-12 mb-6">Our Mission</div>
-    <p class="bold">
+    <p >
       Our mission is to become the leading exporter & sourcing company in the
       industry by providing excellent service to our clients at a competitive
       price point.

@@ -2,7 +2,7 @@
   <div>
     <image-hero-section text="Our Products" />
     <v-container>
-      <div class="display-2 my-8 text-center">Our Products</div>
+      <div class="title my-8 text-center">Some of our products</div>
       <v-row>
         <v-col
           cols="12"

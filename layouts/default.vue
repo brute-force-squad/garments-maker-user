@@ -1,6 +1,11 @@
 <template>
   <v-app dark>
     <v-app-bar app color="primary" dark class="app-depth">
+      <v-app-bar-nav-icon
+        @click="drawer = !drawer"
+        class="d-flex d-md-none"
+      ></v-app-bar-nav-icon>
+
       <router-link to="/">
         <div class="d-flex align-center">
           <v-img
@@ -19,7 +24,7 @@
 
       <div class="d-none d-md-flex">
         <v-btn
-          v-for="item in items"
+          v-for="item in mainItems"
           :key="item.title"
           class="mr-3 text-capitalize"
           :to="item.to"
@@ -29,28 +34,69 @@
         >
           {{ item.title }}
         </v-btn>
-      </div>
-      <div class="d-flex d-md-none">
+
+        <!-- sub items -->
         <v-menu left bottom rounded="lg" transition="scale-transition">
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn icon v-bind="attrs" v-on="on" aria-label="menu">
-              <v-icon>mdi-menu</v-icon>
+          <template v-slot:activator="{ attrs, on }">
+            <v-btn
+              class="mr-3 text-capitalize"
+              v-bind="attrs"
+              v-on="on"
+              depressed
+              plain
+              text
+            >
+              Others
             </v-btn>
           </template>
 
           <v-list>
-            <v-list-item v-for="item in items" :key="item.title" :to="item.to">
-              <v-list-item-title class="primary-font">{{
-                item.title
-              }}</v-list-item-title>
+            <v-list-item
+              v-for="item in subItems"
+              :key="item.title"
+              :to="item.to"
+            >
+              <v-list-item-title class="primary-font">
+                {{ item.title }}
+              </v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
       </div>
     </v-app-bar>
+
+    <v-navigation-drawer v-model="drawer" temporary fixed>
+      <v-list nav>
+        <v-list-item-group active-class="blue-grey--text text--darken-4">
+          <v-list-item
+            v-for="item in mainItems"
+            :key="item.title"
+            :to="item.to"
+          >
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item>
+
+          <v-list-group :value="true">
+            <template v-slot:activator>
+              <v-list-item-content>
+                <v-list-item-title>Others</v-list-item-title>
+              </v-list-item-content>
+            </template>
+
+            <v-list-item v-for="(item, i) in subItems" :key="i" :to="item.to">
+              <v-list-item-title v-text="item.title"></v-list-item-title>
+            </v-list-item>
+          </v-list-group>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+
+    <!-- main body -->
     <v-main>
       <nuxt />
     </v-main>
+
+    <!-- footer -->
     <v-footer dark padless class="mt-12 primary">
       <v-container>
         <div class="text-center title">Garments Maker LTD</div>
@@ -146,15 +192,19 @@ export default {
   },
   data() {
     return {
+      drawer: false,
       fixed: false,
-      items: [
+      mainItems: [
         { title: 'Home', to: '/' },
-        { title: 'Our Strategy', to: '/our-strategy' },
         { title: 'About GML', to: '/about-us' },
-        { title: 'Supply Chain Innovation', to: '/supply-chain' },
-        { title: 'Gallery', to: '/gallery' },
-        { title: 'Career', to: '/career' },
+        { title: 'Our Strategy', to: '/our-strategy' },
+        { title: 'Products', to: '/products' },
         { title: 'Contact Us', to: '/contact-us' },
+      ],
+      subItems: [
+        { title: 'Gallery', to: '/gallery' },
+        { title: 'Newsletter', to: '/newsletters' },
+        { title: 'Career', to: '/career' },
       ],
     }
   },
@@ -162,10 +212,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.app-depth {
-  z-index: 100;
-}
-
 .title,
 .subtitle-1,
 .body-2 {

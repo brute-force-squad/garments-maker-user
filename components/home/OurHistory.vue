@@ -2,8 +2,8 @@
   <div>
     <v-row>
       <v-col cols="12">
-        <div class="display-2 mt-12 mb-6">Our Strategy</div>
-        <p class="bold">
+        <div class="display-2 mt-12 mb-6">Our Strategy About GML</div>
+        <p>
           Our vision is simple but bold – we aspire to create the supply chain
           of the future to help our customers navigate the digital economy and
           to make life better for one billion people in the supply chain.
@@ -21,33 +21,37 @@
         </p>
       </v-col>
       <v-col cols="12" sm="6">
-        <v-card flat class="card">
+        <v-card outlined class="card">
           <v-card-title>
             <v-icon class="icon strategy-icon" color="secondary">
               mdi-strategy</v-icon
             >
           </v-card-title>
           <v-card-text>
-            Capturing and sharing data-driven insights across the entire value
-            chain will help us better predict and interact with our customers
-            faster and more creatively. Speed, innovation and digitalization are
-            key to building the supply chain of the future.
+            <p>
+              Capturing and sharing data-driven insights across the entire value
+              chain will help us better predict and interact with our customers
+              faster and more creatively. Innovation and digitalization are
+              key to building the supply chain.
+            </p>
             <div class="card-title mt-4">STRATEGIC DIRECTION</div>
           </v-card-text>
         </v-card>
       </v-col>
       <v-col cols="12" sm="6">
-        <v-card flat class="card">
+        <v-card outlined class="card">
           <v-card-title>
             <v-icon class="icon autorenew" color="secondary">
               mdi-autorenew</v-icon
             >
           </v-card-title>
           <v-card-text>
-            We responsibly manage our environmental, social and governance
-            performance and work with our customers, suppliers and industry
-            partners to further the sustainability of supply chains and
-            communities across our ecosystem.
+            <p>
+              We responsibly manage our environmental, social and governance
+              performance and work with our customers, suppliers and industry
+              partners to further the sustainability of supply chains and
+              communities across our ecosystem.
+            </p>
             <div class="card-title mt-4">SUSTAINABILITY STRATEGY</div>
           </v-card-text>
         </v-card>
@@ -65,6 +69,7 @@ export default {
 
 <style lang="scss" scoped>
 .card {
+  border-radius: 12px ;
   .autorenew {
     animation: circle 2s linear infinite;
   }
