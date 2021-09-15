@@ -36,7 +36,7 @@
         </v-btn>
 
         <!-- sub items -->
-        <v-menu left bottom rounded="lg" transition="scale-transition">
+        <v-menu left bottom rounded="lg" offset-y>
           <template v-slot:activator="{ attrs, on }">
             <v-btn
               class="mr-3 text-capitalize"
@@ -47,6 +47,7 @@
               text
             >
               Others
+              <v-icon right>mdi-menu-down</v-icon>
             </v-btn>
           </template>
 
