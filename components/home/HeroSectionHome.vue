@@ -9,7 +9,7 @@
     <div class="overlay"></div>
     <div class="text">
       <div class="display-3 mb-2">Garments Maker Limited</div>
-      <div class="subtitle-1">
+      <div class="overline">
         Leading Company of Bangladesh in Garments Industry
       </div>
     </div>
@@ -21,6 +21,13 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
+.display-3 {
+  font-weight: 600;
+}
+.overline {
+  font-size: 0.95em !important;
+  color: #ffa800;
+}
 .showcase {
   position: relative;
   height: 80vh;
