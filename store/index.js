@@ -4,6 +4,7 @@ export const state = () => ({
   products: [],
   newsletter: [],
   singleNews: [],
+  galleryImages: [],
   snackbarText: '',
   snackbarColor: '',
   filePath: '',
@@ -31,6 +32,9 @@ export const mutations = {
   SET_SINGLE_NEWS(state, value) {
     state.singleNews = value
   },
+  SET_GALLERY_IMAGES(state, value) {
+    state.galleryImages = value
+  },
 }
 
 export const actions = {
@@ -52,6 +56,18 @@ export const actions = {
       .then((res) => {
         console.log(res)
         context.commit('SET_NEWSLETTER_INFO', res.data.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+
+  getGallery(context) {
+    axios
+      .get('https://gml-api.herokuapp.com/api/v1/others/gallery')
+      .then((res) => {
+        console.log(res)
+        context.commit('SET_GALLERY_IMAGES', res.data.data)
       })
       .catch((err) => {
         console.log(err)
