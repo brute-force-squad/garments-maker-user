@@ -4,14 +4,7 @@
     <v-container>
       <div class="title my-8 text-center">Some of our products</div>
       <v-row>
-        <v-col
-          cols="12"
-          sm="6"
-          md="4"
-          lg="3"
-          v-for="product in products"
-          :key="product._id"
-        >
+        <v-col cols="12" sm="2" v-for="product in products" :key="product._id">
           <product-card :product="product" />
         </v-col>
       </v-row>
