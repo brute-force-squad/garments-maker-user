@@ -1,12 +1,12 @@
 <template>
-  <v-container>
+  <v-container class="custom-container">
     <v-img
-      src="https://picsum.photos/id/237/200/300"
+      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
       aspect-ratio="3.5"
     ></v-img>
     <div class="display-1 mt-6">How we improve from small to large</div>
     <div class="body-2 mt-3">Published: 21 September, 2021</div>
-    <div class="body-1 mt-12">
+    <div class="body-1 mt-8">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam alias
       eum accusamus nobis suscipit? Doloremque similique, commodi at ad rerum,
       quaerat reprehenderit sequi porro iste, beatae provident! Magnam officiis
@@ -31,4 +31,8 @@
 export default {}
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.custom-container {
+  max-width: clamp(45%, 500px, 95%);
+}
+</style>
