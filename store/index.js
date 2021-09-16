@@ -2,7 +2,9 @@ import axios from 'axios'
 
 export const state = () => ({
   products: [],
-  clients: [],
+  newsletter: [],
+  singleNews: [],
+  galleryImages: [],
   snackbarText: '',
   snackbarColor: '',
   filePath: '',
@@ -13,8 +15,8 @@ export const mutations = {
   SET_PRODUCT_INFO(state, value) {
     state.products = value
   },
-  SET_CLIENT_INFO(state, value) {
-    state.clients = value
+  SET_NEWSLETTER_INFO(state, value) {
+    state.newsletter = value
   },
   SET_IS_LOADING(state, value) {
     state.isLoading = value
@@ -27,13 +29,19 @@ export const mutations = {
   SET_RESUME_FILE(state, value) {
     state.filePath = value
   },
+  SET_SINGLE_NEWS(state, value) {
+    state.singleNews = value
+  },
+  SET_GALLERY_IMAGES(state, value) {
+    state.galleryImages = value
+  },
 }
 
 export const actions = {
   getProducts(context) {
     console.log('called')
     axios
-      .get('https://garments-maker-api.herokuapp.com/api/v1/products')
+      .get('https://gml-api.herokuapp.com/api/v1/products')
       .then((res) => {
         console.log(res)
         context.commit('SET_PRODUCT_INFO', res.data.data)
@@ -42,12 +50,36 @@ export const actions = {
         console.log(err)
       })
   },
-  getClients(context) {
+  getNewsLetters(context) {
     axios
-      .get('https://garments-maker-api.herokuapp.com/api/v1/clients')
+      .get('https://gml-api.herokuapp.com/api/v1/others/news')
       .then((res) => {
         console.log(res)
-        context.commit('SET_CLIENT_INFO', res.data.data)
+        context.commit('SET_NEWSLETTER_INFO', res.data.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+
+  getGallery(context) {
+    axios
+      .get('https://gml-api.herokuapp.com/api/v1/others/gallery')
+      .then((res) => {
+        console.log(res)
+        context.commit('SET_GALLERY_IMAGES', res.data.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+
+  getSingleNewsLetter(context, payload) {
+    axios
+      .get(`https://gml-api.herokuapp.com/api/v1/others/news/${payload}`)
+      .then((res) => {
+        console.log(res)
+        context.commit('SET_SINGLE_NEWS', res.data.data)
       })
       .catch((err) => {
         console.log(err)
@@ -57,7 +89,7 @@ export const actions = {
   createNewContact(context, payload) {
     context.commit('SET_IS_LOADING', true)
     axios
-      .post('https://garments-maker-api.herokuapp.com/api/v1/contacts', payload)
+      .post('https://gml-api.herokuapp.com/api/v1/contacts', payload)
       .then((res) => {
         context.commit('SHOW_SNACKBAR', {
           text: 'Message sent successfully',
@@ -102,10 +134,10 @@ export const actions = {
 
   addCareerInfo(context, payload) {
     context.commit('SET_IS_LOADING', true)
-    payload.filePath = context.state.filePath
+    payload.url = context.state.filePath
     console.log(payload)
     axios
-      .post('https://garments-maker-api.herokuapp.com/api/v1/careers', payload)
+      .post('https://gml-api.herokuapp.com/api/v1/careers', payload)
       .then((res) => {
         context.commit('SHOW_SNACKBAR', {
           text: 'Message sent successfully',

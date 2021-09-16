@@ -1,16 +1,14 @@
 <template>
   <div>
-    <v-card rounded="lg">
+    <v-card rounded="lg" outlined>
       <v-img :src="product.filePath" contain height="150" />
-      <v-card-title>{{ product.name }}</v-card-title>
-      <v-card-subtitle class="mt-3 py-0"
-        ><span class="font-weight-medium">Buyer:</span>
-        {{ product.buyer }}</v-card-subtitle
-      >
-      <v-card-subtitle
-        ><span class="font-weight-medium">Category:</span>
-        {{ product.category }}</v-card-subtitle
-      >
+      <div class="center-texts">
+        <div class="title">{{ product.name }}</div>
+        <v-card-subtitle
+          ><span class="font-weight-medium">Category:</span>
+          {{ product.category }}</v-card-subtitle
+        >
+      </div>
     </v-card>
   </div>
 </template>
@@ -21,4 +19,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.center-texts {
+  margin-top: 16px;
+  text-align: center !important;
+}
+</style>
