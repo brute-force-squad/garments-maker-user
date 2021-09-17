@@ -9,8 +9,8 @@
           to make life better for one billion people in the supply chain.
         </p>
         <p>
-          In 2000 our company has initiated and developed. The concept of”
-          Garments Maker Ltd”. Our first domain of intervention was garments
+          In 2000 our company has initiated and developed. The concept of
+          "Garments Maker Ltd”. Our first domain of intervention was garments
           which are presently our main activity. Since our creation we have been
           developing our expertise in the garments industry. 18 years of
           experience has largely validated our concept and placed us as a leader
@@ -31,8 +31,8 @@
             <p>
               Capturing and sharing data-driven insights across the entire value
               chain will help us better predict and interact with our customers
-              faster and more creatively. Innovation and digitalization are
-              key to building the supply chain.
+              faster and more creatively. Innovation and digitalization are key
+              to building the supply chain.
             </p>
             <div class="card-title mt-4">STRATEGIC DIRECTION</div>
           </v-card-text>
@@ -69,7 +69,7 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  border-radius: 12px ;
+  border-radius: 12px;
   .autorenew {
     animation: circle 2s linear infinite;
   }
