@@ -1,11 +1,16 @@
 <template>
   <v-container class="custom-container">
-    <v-img :src="singleNews.url" aspect-ratio="3.5"></v-img>
-    <div class="display-1 mt-6">{{ singleNews.title }}</div>
-    <div class="body-2 mt-3">
-      Published: {{ moment(singleNews.createAt).format('ll') }}
+    <div v-if="isLoading" class="d-flex justify-center">
+      <v-progress-circular :size="50" color="primary" indeterminate />
     </div>
-    <div class="body-1 mt-8" v-html="singleNews.details"></div>
+    <div v-else>
+      <v-img :src="singleNews.url" aspect-ratio="3.5"></v-img>
+      <div class="display-1 mt-6">{{ singleNews.title }}</div>
+      <div class="body-2 mt-3">
+        Published: {{ moment(singleNews.createAt).format('ll') }}
+      </div>
+      <div class="body-1 mt-8" v-html="singleNews.details"></div>
+    </div>
   </v-container>
 </template>
 
@@ -21,7 +26,7 @@ export default {
     this.$store.dispatch('getSingleNewsLetter', this.$route.params.id)
   },
   computed: {
-    ...mapState(['singleNews']),
+    ...mapState(['singleNews', 'isLoading']),
   },
 }
 </script>

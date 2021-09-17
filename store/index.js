@@ -39,6 +39,7 @@ export const mutations = {
 
 export const actions = {
   getProducts(context) {
+    context.commit('SET_IS_LOADING', true)
     axios
       .get('https://gml-api.herokuapp.com/api/v1/products')
       .then((res) => {
@@ -47,8 +48,10 @@ export const actions = {
       .catch((err) => {
         console.log(err)
       })
+      .finally(() => context.commit('SET_IS_LOADING', false))
   },
   getNewsLetters(context) {
+    context.commit('SET_IS_LOADING', true)
     axios
       .get('https://gml-api.herokuapp.com/api/v1/others/news')
       .then((res) => {
@@ -57,9 +60,11 @@ export const actions = {
       .catch((err) => {
         console.log(err)
       })
+      .finally(() => context.commit('SET_IS_LOADING', false))
   },
 
   getGallery(context) {
+    context.commit('SET_IS_LOADING', true)
     axios
       .get('https://gml-api.herokuapp.com/api/v1/others/gallery')
       .then((res) => {
@@ -68,9 +73,11 @@ export const actions = {
       .catch((err) => {
         console.log(err)
       })
+      .finally(() => context.commit('SET_IS_LOADING', false))
   },
 
   getSingleNewsLetter(context, payload) {
+    context.commit('SET_IS_LOADING', true)
     axios
       .get(`https://gml-api.herokuapp.com/api/v1/others/news/${payload}`)
       .then((res) => {
@@ -79,6 +86,7 @@ export const actions = {
       .catch((err) => {
         console.log(err)
       })
+      .finally(() => context.commit('SET_IS_LOADING', false))
   },
 
   createNewContact(context, payload) {
