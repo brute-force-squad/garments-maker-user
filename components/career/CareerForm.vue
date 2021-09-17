@@ -42,14 +42,11 @@
               />
             </v-col>
             <v-col cols="12" md="6">
-              <v-file-input
-                outlined
-                label="Attach Your Resume*"
-                accept="image/* , application/msword , application/vnd.openxmlformats-officedocument.wordprocessingml.document , application/pdf"
+              <v-text-field
+                v-model="url"
+                label="Resume public URL*"
                 :rules="requiredField"
-                prepend-icon=""
-                :loading="fileLoading"
-                @change="handleFileChange"
+                outlined
               />
             </v-col>
             <v-col cols="12">
@@ -88,6 +85,7 @@ export default {
     fullName: '',
     email: '',
     title: '',
+    url: '',
     fileLoading: false,
     coverLetter: '',
     requiredField: [(v) => !!v || 'Field is required'],
@@ -100,17 +98,12 @@ export default {
     ...mapState(['isLoading']),
   },
   methods: {
-    handleFileChange(file) {
-      this.fileLoading = true
-      this.$store
-        .dispatch('uploadResume', file)
-        .finally(() => (this.fileLoading = false))
-    },
     handleSubmit() {
       this.$store.dispatch('addCareerInfo', {
         fullName: this.fullName,
         email: this.email,
         position: this.title,
+        url: this.url,
         coverLetter: this.coverLetter,
       })
       this.$refs.form.reset()

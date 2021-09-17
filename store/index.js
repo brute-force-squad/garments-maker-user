@@ -115,29 +115,28 @@ export const actions = {
       .finally(() => context.commit('SET_IS_LOADING', false))
   },
 
-  async uploadResume(context, payload) {
-    const formData = new FormData()
-    formData.append('file', payload)
-    formData.append('upload_preset', 'ml_default')
-    return await axios
-      .post('https://api.cloudinary.com/v1_1/dijk4ytvg/raw/upload', formData)
-      .then((res) => {
-        context.commit('SET_RESUME_FILE', res.data.url)
-        return true
-      })
-      .catch((err) => {
-        context.commit('SHOW_SNACKBAR', {
-          text: 'Something went wrong while uploading file.',
-          color: 'error',
-        })
-        return false
-      })
-  },
+  // async uploadResume(context, payload) {
+  //   console.log(payload)
+  //   const formData = new FormData()
+  //   formData.append('file', payload)
+  //   formData.append('upload_preset', 'ittkcyam')
+  //   return await axios
+  //     .post('https://api.cloudinary.com/v1_1/disjsj1o9/image/upload', formData)
+  //     .then((res) => {
+  //       context.commit('SET_RESUME_FILE', res.data.url.replace('.pdf', '.jpg'))
+  //       return true
+  //     })
+  //     .catch((err) => {
+  //       context.commit('SHOW_SNACKBAR', {
+  //         text: 'Something went wrong while uploading file.',
+  //         color: 'error',
+  //       })
+  //       return false
+  //     })
+  // },
 
   addCareerInfo(context, payload) {
     context.commit('SET_IS_LOADING', true)
-    payload.url = context.state.filePath
-    console.log(payload)
     axios
       .post('https://gml-api.herokuapp.com/api/v1/careers', payload)
       .then((res) => {
