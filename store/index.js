@@ -39,11 +39,9 @@ export const mutations = {
 
 export const actions = {
   getProducts(context) {
-    console.log('called')
     axios
       .get('https://gml-api.herokuapp.com/api/v1/products')
       .then((res) => {
-        console.log(res)
         context.commit('SET_PRODUCT_INFO', res.data.data)
       })
       .catch((err) => {
@@ -54,7 +52,6 @@ export const actions = {
     axios
       .get('https://gml-api.herokuapp.com/api/v1/others/news')
       .then((res) => {
-        console.log(res)
         context.commit('SET_NEWSLETTER_INFO', res.data.data)
       })
       .catch((err) => {
@@ -66,7 +63,6 @@ export const actions = {
     axios
       .get('https://gml-api.herokuapp.com/api/v1/others/gallery')
       .then((res) => {
-        console.log(res)
         context.commit('SET_GALLERY_IMAGES', res.data.data)
       })
       .catch((err) => {
@@ -78,7 +74,6 @@ export const actions = {
     axios
       .get(`https://gml-api.herokuapp.com/api/v1/others/news/${payload}`)
       .then((res) => {
-        console.log(res)
         context.commit('SET_SINGLE_NEWS', res.data.data)
       })
       .catch((err) => {
@@ -119,7 +114,6 @@ export const actions = {
     return await axios
       .post('https://api.cloudinary.com/v1_1/dijk4ytvg/raw/upload', formData)
       .then((res) => {
-        console.log(res.data)
         context.commit('SET_RESUME_FILE', res.data.url)
         return true
       })
