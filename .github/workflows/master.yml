@@ -26,7 +26,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: ftp.oqd.bcq.mybluehost.me
-          username: teamtigers@gml-user.themebuysell.com
+          server: ftp.garmentsmaker-bd.com
+          username: admin@garmentsmaker-bd.com
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
