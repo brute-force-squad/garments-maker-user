@@ -27,6 +27,6 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ftp.garmentsmaker-bd.com
-          username: admin@garmentsmaker-bd.com
+          username: nishad@garmentsmaker-bd.com
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
